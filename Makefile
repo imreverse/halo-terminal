@@ -75,9 +75,10 @@ install: check all
 	[ -d $(INSTALL_DIR)/$(THEME_DIR) ] && rm -rf $(INSTALL_DIR)/$(THEME_DIR) || true
 	mkdir -p $(INSTALL_DIR)
 	cp -r $(BUILD_DIR) $(INSTALL_DIR)/$(THEME_DIR)
-	sed -i '/GRUB_TERMINAL\s*=/ s/^#*/#/' $(GRUB_CONFIG)
-	sed -i '\|GRUB_THEME=$(INSTALL_DIR)/$(THEME_DIR)/theme|d' $(GRUB_CONFIG)
-	echo 'GRUB_THEME=$(INSTALL_DIR)/$(THEME_DIR)/theme' >> $(GRUB_CONFIG)
+	sed -i '/GRUB_THEME\s*=/ s/^#*/#/' $(GRUB_CONFIG)
+	sed -i '/GRUB_DISABLE_OS_PROBER/d' $(GRUB_CONFIG)
+	echo 'GRUB_THEME="$(INSTALL_DIR)/$(THEME_DIR)/theme.txt"' >> $(GRUB_CONFIG)
+	echo 'GRUB_DISABLE_OS_PROBER=false' >> $(GRUB_CONFIG)
 	grub-mkconfig -o $(GRUB_CFG)
 
 uninstall: check
