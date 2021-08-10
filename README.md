@@ -13,16 +13,14 @@ This theme was designed with the intent to provide a fully customizable experien
 Building and installaton
 -------------------------
 
-Tools needed for building are `xcftools` and `imagemagick`, available on most major distributions through the default package manager (Gimp is *not* needed).
+Required tools:
+
+    $ sudo pacman -S xcftools imagemagick --needed
 
 Build and install using `make`:
 
 	$ make
 	$ sudo make install
-
-Uninstall:
-
-	$ sudo make uninstall
 
 Customization
 -------------
