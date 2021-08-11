@@ -41,7 +41,7 @@ Run `make clean` to remove previously built files before re-building with differ
  - `SELECTED_FG_COLOR`: text color for the selected boot menu entry, in HTML 6-digit hex format or valid HTML color name.
  - `SELECTED_BG_COLOR`: background color for the selected boot menu entry, in any valid CSS color notation. This is by default derived from the `THEME_COLOR`, but can be manually set to any other value.
 
- [screenshot-img]: https://i.imgur.com/3aiHasJ.png
+ [screenshot-img]: https://i.imgur.com/Sq5gi6V.png
  [1]: https://www.gnu.org/software/grub/
  [2]: http://fallout.wikia.com/wiki/Terminal
  [3]: https://github.com/mebeim/grub-fallout-terminal-theme
